@@ -1,5 +1,6 @@
 # Learning3DSegmentationWith2DAnnotations
-This is an implementation of the method described in the paper "[Learning to Segment 3D Linear Structures Using Only 2D Annotations](https://infoscience.epfl.ch/record/256857)".
+This is an implementation of the method described in the paper  
+"[Learning to Segment 3D Linear Structures Using Only 2D Annotations](https://infoscience.epfl.ch/record/256857)".  
 It contains a demonstration limited to the publicly available MRA dataset, referred to in the paper as "Angiography".
 
 Get the general network training routines, the code for preprocessing of the dataset, and the experiment code  
