@@ -124,7 +124,7 @@ function DataProviderProjections:getBatch(bSize)
   -- this requires checking the size of the first data item
   local im,lb=self.dataset:item(self.inds[self.in_ind+1])
 
-  local szin=NetworkTraining2.appendNum2Storage(im:size(),bSize)
+  local szin=NetworkTraining.appendNum2Storage(im:size(),bSize)
   self.input:resize(szin)
   self.input[1]:copy(im)
   local szta={}
@@ -132,7 +132,7 @@ function DataProviderProjections:getBatch(bSize)
     -- it is possible that the dataset does not have labels
     -- but if it has, then check the expected size of the target batch
     for i =1,3 do
-      table.insert(szta,NetworkTraining2.appendNum2Storage(lb[i]:size(),bSize))
+      table.insert(szta,NetworkTraining.appendNum2Storage(lb[i]:size(),bSize))
       self.target[i]:resize(szta[i])
       self.target[i][1]:copy(lb[i])
     end
