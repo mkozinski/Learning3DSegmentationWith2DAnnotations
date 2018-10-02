@@ -2,7 +2,6 @@
 local codeDir="../" 
 local dataDir="../MRAdata/"
 local logdir="log_mip_annotation"
-local modelDir=paths.concat(codeDir,"models")
 local nClasses=2
 local bSize=3
 

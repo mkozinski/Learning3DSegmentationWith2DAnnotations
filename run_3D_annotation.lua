@@ -3,7 +3,6 @@
 local codeDir="../" 
 local dataDir="../MRAdata/"
 local logdir="log_3D_annotation"
-local modelDir=paths.concat(codeDir,"models")
 local nClasses=2
 local bSize=3
 
@@ -52,7 +51,7 @@ local function augmentData(i,l)
   perminds:narrow(1,2,3):copy(torch.add(pi,1))
   local ip=i:permute(unpack(perminds:totable()))
   local lp=l:permute(unpack(pi:totable()))
-  ic,lc= NetworkTraining.jitterImgLbl3(ip,lp,torch.Tensor{64,64,64}) 
+  ic,lc= NetworkTraining.jitterImgLbl(ip,lp,torch.Tensor{64,64,64}) 
   
   lc:add(1)
   return ic,lc
