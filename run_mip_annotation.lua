@@ -44,9 +44,8 @@ local function tot(o,t)
 end
 
 local function augmentData(i,l) 
-  -- pretend annotation of the 3rd projection is all foreground,
-  -- this is equivalent to having no annotation for this projection
-  l[3]:fill(2)
+  -- pretend we have no annotation of the 3rd projection 
+  l[3]:fill(0)
   local ic=i:float()
   local lc=l
   -- flip
