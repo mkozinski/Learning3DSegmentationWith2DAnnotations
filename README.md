@@ -3,6 +3,9 @@ This is an implementation of the method described in the paper
 "[Learning to Segment 3D Linear Structures Using Only 2D Annotations](https://infoscience.epfl.ch/record/256857)".  
 It contains a demonstration limited to the publicly available MRA dataset, referred to in the paper as "Angiography".
 
+Prerequisites for running this code include a [torch](http://torch.ch/docs/getting-started.html) installation, CUDNN libraries from NVIDIA, and their [torch bindings](https://github.com/soumith/cudnn.torch), 
+and an installation of [optnet](https://github.com/fmassa/optimize-net).
+
 Get the general network training routines, the code for preprocessing of the dataset, and the experiment code  
 `git clone https://github.com/mkozinski/NetworkTraining`  
 `git clone https://github.com/mkozinski/MRAdata`  
@@ -32,3 +35,8 @@ Moreover, the logs generated for the two experiment are synchronised in terms of
 The networks with the trained weights are dumped in the log directories:  
 a) the recent network is stored at `<logdir>/basic_net_last.t7`,  
 b) the network attaining the highest F1 score on the test set is stored at `<logdir>/test_net_bestF1.t7`.
+
+To generate prediction for the test set using a trained network run  
+`th -e "dofile \"saveOutputVolumes.lua\""`.
+The name of the file containing the network, and the output directory are defined at the beginning of the script.
+The output is saved in form of stacks of png images.
