@@ -30,7 +30,7 @@ a) the epoch-averaged loss on the training data `plot "<logdir>/basicEpoch.log" 
 b) the F1 performance on the test data `plot "<logdir>/testEpoch.log" u 1`.
 
 The training loss and test performance plots are not synchronised as testing is performed once every 50 epochs.
-Moreover, the logs generated for the two experiment are synchronised in terms of the number of epochs, but not in terms of the number of updates.
+Moreover, the logs generated for the two experiments are synchronised in terms of the number of epochs, but not in terms of the number of updates.
 
 The networks with the trained weights are dumped in the log directories:  
 a) the recent network is stored at `<logdir>/basic_net_last.t7`,  
