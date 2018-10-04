@@ -40,3 +40,6 @@ To generate prediction for the test set using a trained network run
 `th -e "dofile \"saveOutputVolumes.lua\""`.  
 The name of the file containing the network, and the output directory are defined at the beginning of the script.
 The output is saved in form of stacks of png images.
+
+Example output, after +-100 000 updates.
+![Animation:rotating brain vasculature.](https://documents.epfl.ch/users/k/ko/kozinski/www/brain_vasculature.gif)
