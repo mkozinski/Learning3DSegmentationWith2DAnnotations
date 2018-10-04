@@ -41,6 +41,5 @@ To generate prediction for the test set using a trained network run
 The name of the file containing the network, and the output directory are defined at the beginning of the script.
 The output is saved in form of stacks of png images.
 
-Example output for a test file, after around 100 000 updates (please note that the number of updates specified in the script is 50 000), for a network scoring 76% IoU on a held out set of volumes.  
-[Animation:rotating brain vasculature.](http://documents.epfl.ch/users/k/ko/kozinski/www/brain_vasculature.aa)  
+[This](http://documents.epfl.ch/users/k/ko/kozinski/www/brain_vasculature.aa) is example output for a test volume held out from training, after around 100 000 updates (please note that the number of updates specified in the script is 50 000), for a network scoring 76% IoU on the whole held out test set.  
 The segmentation has been visualized with [slicer](https://www.slicer.org/), in particular using the "Volume Rendering" and "Screen Capture" modules.
